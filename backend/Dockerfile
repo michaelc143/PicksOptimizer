@@ -2,10 +2,10 @@ FROM python:3.9
 
 WORKDIR /app/backend
 
-COPY requirements.txt .
+COPY requirements.txt /app/backend
 
 RUN pip install -r requirements.txt
 
-COPY . .
+COPY . /app/backend
 
-CMD ["python", "backend.py"]
+CMD ["python3", "backend.py"]
